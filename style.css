@@ -1,0 +1,95 @@
+body{
+    height: 100vh;
+    margin: 0px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: black; 
+    font-family: "Inria Serif", serif;
+    /* cursor: url("http://anuary.com/dev/hp/pad3/public/images/hand-cursor.png"), pointer; */
+    user-select: none;
+    overflow: hidden;
+}
+.panel{
+    color: white;
+    font-family: "Inria Serif", serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+body, .panel{
+    background-size: cover;
+    background-position: center;
+}
+
+.visual{
+    cursor: pointer;
+    transition: 5s ease;
+}
+
+.sound{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 4em;
+    cursor: pointer;
+    transition: .3s ease;
+    z-index: 100;
+}
+
+#title{
+    font-family: "Graduate", serif;
+    font-size: 7vw; 
+    background: -webkit-linear-gradient(right, yellow, orange, orange, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.narrative:not(#title){
+    font-size: 1.5em;
+    transition: .3s ease;
+}
+
+.instruction{
+    cursor: pointer;
+    opacity: 60%;
+    font-size: 1.5em;
+}
+.instruction:hover{
+    opacity: 65%;
+}
+
+.lfall{
+    opacity: 0%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    transition: 10s ease;
+}
+
+.box{
+    z-index: 99;
+    position: fixed;
+    height: 100vh;
+    cursor: pointer;
+    width: 30%;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .box{
+        width: 40%;
+    }
+
+}

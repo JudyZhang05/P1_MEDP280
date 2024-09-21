@@ -27,9 +27,10 @@
 
 ## **Live Demo**
 
-- Include a link to the live version of the project hosted on GitHub Pages.
+- Here is the [link](https://judyzhang05.github.io/P1_MEDP280/) to the live version of the project hosted on GitHub Pages.
 
 ## **Credits**
+
 - Music Scores
 - Track 1: Русский (Cold_Fire)
 - Track 2: Amaksi (Amaski)
@@ -47,6 +48,7 @@
 - YouTube: Daedalus & Icarus | Puppet Short Film by [Abraham Matias](https://www.youtube.com/watch?v=KuDW8zujFXM&ab_channel=AbrahamMatias)
 
 ## **Future Enhancements (Optional)**
+
 - With further efforts, I would have like to have:
 - smoother and better animations 
 - voice actors, narrator

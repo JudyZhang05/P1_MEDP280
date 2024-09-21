@@ -31,18 +31,18 @@
 
 ## **Credits**
 
-- Music Scores
-- Track 1: Русский (Cold_Fire)
-- Track 2: Amaksi (Amaski)
+- **Music Scores**
+- Track 1: Sad Emotional and Dramatic Piano by Yevhen Onoychenko (Onoychenkomusic)
+- Track 2: Sorrow by Amaksi
   
-- Google Fonts
+- **Google Fonts**
 - Header 1: Graduate
 - Paragraph: Inria Serif
   
-- Images/Visuals
+- **Images/Visuals**
 - Judy Zhang
 
-- Resources and Inspirations
+- **Resources and Inspirations**
 - Article: 30 of the Most Famous Tales from Greek Mythology by the [Greek Travel Tellers](https://greektraveltellers.com/blog/30-of-the-most-famous-tales-from-greek-mythology)
 - YouTube: The myth of Icarus and Daedalus by [Amy Adkins](https://www.youtube.com/watch?v=3s2QPQnuaGk&ab_channel=TED-Ed)
 - YouTube: Daedalus & Icarus | Puppet Short Film by [Abraham Matias](https://www.youtube.com/watch?v=KuDW8zujFXM&ab_channel=AbrahamMatias)

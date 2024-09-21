@@ -41,6 +41,7 @@ let sound = document.querySelector(".sound");
 const text = document.querySelector(".narrative");
 let vs = document.querySelector(".visual");
 const lfall = document.querySelector(".lfall");
+const ffall = document.querySelector(".ffall");
 const instruct = document.querySelector(".instruction");
 
 const next = document.querySelector(".next");
@@ -82,7 +83,6 @@ const start = (progress) => {
 }
 
 function go(p){
-        
     text.innerHTML = "";
 
     if (lineNumber+1 == story.length){
@@ -91,6 +91,13 @@ function go(p){
     }else{
         start(p);
     }
+
+    if(lineNumber == 18){
+        setTimeout(() => {
+            ffall.style.opacity = "100%";
+            ffall.style.animation = "floatdown 5s forwards";
+        },1500
+    )}
 
     if(av.includes(lineNumber)){
         setTimeout(() => {
@@ -134,6 +141,15 @@ function go(p){
     }else{
         text.innerHTML = "Daedalus & Icarus"
         reset();
+    }
+
+    if(lineNumber == 11 && s == true){
+        audio.src = "./assets/t2_e.mp3";
+        audio.play();
+    }else if(lineNumber == 0 && s == true){
+        s = false;
+        sound.src = "./assets/s_off.svg";
+        audio.src = "./assets/t1.mp3";
     }
 }
 
@@ -180,15 +196,21 @@ prev.addEventListener("click", () => {
 })
 
 //sound
+let audio = document.querySelector(".soundTrack")
+
+
+audio.src = "./assets/t1.mp3";
 let s = false;
 sound.addEventListener("click", () => {
     if (s == false){
         s = true;
-        sound.src = "./assets/s_on.svg"
+        sound.src = "./assets/s_on.svg";
+        audio.play();
     }
     else{
         s = false;
-        sound.src = "./assets/s_off.svg"
+        sound.src = "./assets/s_off.svg";
+        audio.pause();
     }
 });
 

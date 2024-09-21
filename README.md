@@ -14,7 +14,7 @@
 
 - List the key features of the project, including:
     - **Animations**: Describe the animations you implemented (e.g., CSS transitions, GSAP effects).
-    - **Sound Effects**: Specify where sound effects are used and how they enhance the user experience.
+    - **Sound Effects**: Specify where sound effects are used and how they enhance the user experience. Music
     - **User-triggered Events**: Explain how users interact with the page (e.g., clicking, scrolling, hovering) and how the page responds.
     - **Responsive Design**: Explain how the design adapts to different devices (e.g., desktop, tablet, mobile).
 
@@ -30,7 +30,11 @@
 - Include a link to the live version of the project hosted on GitHub Pages.
 
 ## **Credits**
-
+- Sound Tracks
+- Track 1: Русский (Cold_Fire)
+- Track 2: Dmitrii Kolesnikov (The_Mountain)
+- Track 3: Amaksi (Amaski)
+  
 - List any third-party assets used in the project (e.g., sound effects, images, fonts) and provide proper attribution.
 - Acknowledge any resources, tutorials, or references you used to help complete the project.
 

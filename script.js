@@ -191,7 +191,7 @@ const direct = () => {
         instruct.innerHTML = device_size.mob;
         vs.style.width = "150%";
         vs.style.marginTop = "40%";
-    }else if (hsize.matches){
+    }else if (hsize.matches){     
         instruct.innerHTML = device_size.web;
         vs.style.width = "60%";
         vs.style.marginTop = "0%";

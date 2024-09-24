@@ -7,7 +7,7 @@ body{
     background: black; 
     font-family: "Inria Serif", serif;
     user-select: none;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .panel{
     color: white;

@@ -48,6 +48,7 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
 let lineNumber = 0;
+let end = false;
 
 // Title Page
 const reset = () => {
@@ -94,22 +95,35 @@ function go(p){
 
     if(lineNumber == 18){
         setTimeout(() => {
+            ffall.style.display = "block";
             ffall.style.opacity = "100%";
             ffall.style.animation = "floatdown 5s forwards";
+            setTimeout(() => {
+                ffall.offsetHeight;
+                ffall.style.display = "none";
+            },3000)
         },1500
     )}
+
+
 
     if(av.includes(lineNumber)){
         setTimeout(() => {
             vs.style.visibility = "visible";
             vs.src = `./assets/d${lineNumber}.png`;
+
             if(wsize.matches){
                 vs.style.width = "150%";
-                vs.style.marginTop = "40%"
-            }else{
+                vs.style.marginTop = "40%";
+            }else if(hsize.matches){
+                vs.style.width = "60%";
+                vs.style.marginTop = "0%";
+            }
+            else{
                 vs.style.marginTop = "10%"
                 vs.style.width = "90%";
             }
+            
             vs.style.opacity = "100%";
             if(lineNumber == 20){
                 lfall.style.opacity = "100%";
@@ -146,10 +160,14 @@ function go(p){
     if(lineNumber == 11 && s == true){
         audio.src = "./assets/t2_e.mp3";
         audio.play();
-    }else if(lineNumber == 0 && s == true){
+    }else if(lineNumber == 1 && s == true && end == true){ //ugh
         s = false;
         sound.src = "./assets/s_off.svg";
         audio.src = "./assets/t1.mp3";
+    }else if(lineNumber == story.length-1){
+        end = true;
+    }else{
+        end = false;
     }
 }
 
@@ -166,19 +184,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // media query
-let wsize = window.matchMedia("(max-width: 500px)");
+let wsize = window.matchMedia("(max-width: 600px)");
+let hsize = window.matchMedia("(max-height: 630px)");
 const direct = () => {
     if(wsize.matches){
         instruct.innerHTML = device_size.mob;
+        vs.style.width = "150%";
+        vs.style.marginTop = "40%";
+    }else if (hsize.matches){
+        instruct.innerHTML = device_size.web;
+        vs.style.width = "60%";
+        vs.style.marginTop = "0%";
     }
     else{
         instruct.innerHTML = device_size.web;
+        vs.style.marginTop = "0%";
+        vs.style.width = "90%";
     }
 }
 direct();
+
 wsize.addEventListener("change", () => {
     direct()
 });
+hsize.addEventListener("change", () => {
+    direct()
+})
+
 
 document.addEventListener("keydown", (event) => {
     if(event.code == "ArrowRight"){

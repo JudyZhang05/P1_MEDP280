@@ -48,7 +48,6 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
 let lineNumber = 0;
-let end = false;
 
 // Title Page
 const reset = () => {
@@ -160,18 +159,14 @@ function go(p){
     if(lineNumber == 11 && s == true){
         audio.src = "./assets/t2_e.mp3";
         audio.play();
-    }else if(lineNumber == 1 && s == true && end == true){ //ugh
+    }else if(lineNumber == 0 && s == true){
         s = false;
         sound.src = "./assets/s_off.svg";
         audio.src = "./assets/t1.mp3";
-    }else if(lineNumber == story.length-1){
-        end = true;
-    }else{
-        end = false;
     }
 }
 
-vs.addEventListener("click", () => {
+vs.addEventListener("click", (e) => {
     if(at.includes(lineNumber)){
         vs.src = `./assets/d${lineNumber}_1.png`
     }
@@ -217,6 +212,19 @@ document.addEventListener("keydown", (event) => {
         go(1);
     }else if(event.code == "ArrowLeft" && lineNumber >= 1){
         go(-1);
+    }else if(event.code == "Space" && at.includes(lineNumber)){
+        vs.src = `./assets/d${lineNumber}_1.png`
+    }else if(event.code == "KeyM"){
+        if (s == false){
+            s = true;
+            sound.src = "./assets/s_on.svg";
+            audio.play();
+        }
+        else{
+            s = false;
+            sound.src = "./assets/s_off.svg";
+            audio.pause();
+        }
     }
 });
 
@@ -245,4 +253,3 @@ sound.addEventListener("click", () => {
         audio.pause();
     }
 });
-

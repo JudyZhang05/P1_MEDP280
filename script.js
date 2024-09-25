@@ -118,7 +118,7 @@ function go(p){
         setTimeout(() => {
             vs.style.visibility = "visible";
             vs.src = `./assets/d${lineNumber}.png`;
-
+            
             if(wsize.matches){
                 vs.style.width = "150%";
                 vs.style.marginTop = "40%";
@@ -161,6 +161,7 @@ function go(p){
         });
     }else{
         text.innerHTML = "Daedalus & Icarus"
+        vs.src = ""
         reset();
     }
 

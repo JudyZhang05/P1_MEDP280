@@ -103,3 +103,32 @@ body, .panel{
         width: 40%;
     }
 }
+
+.closefirst{
+    display: flex;
+    justify-content: space-between;
+}
+.readfirst{
+    z-index: 101;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.87);
+    position: absolute;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.read{
+    margin: 2%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 20px;
+}
+.read li:not(.read li:nth-child(4)){
+    padding-bottom: 2%;
+}
+.x{
+    cursor: pointer;
+}

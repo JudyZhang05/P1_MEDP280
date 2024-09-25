@@ -47,7 +47,17 @@ const instruct = document.querySelector(".instruction");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
+const read = document.querySelector(".readfirst");
+const exit = document.querySelector(".x");
+
 let lineNumber = 0;
+let cross = false;
+
+//readfirst
+exit.addEventListener("click", () => {
+    read.style.display = "none";
+    cross = true;
+})
 
 // Title Page
 const reset = () => {
@@ -103,8 +113,6 @@ function go(p){
             },3000)
         },1500
     )}
-
-
 
     if(av.includes(lineNumber)){
         setTimeout(() => {
@@ -208,22 +216,24 @@ hsize.addEventListener("change", () => {
 
 
 document.addEventListener("keydown", (event) => {
-    if(event.code == "ArrowRight"){
-        go(1);
-    }else if(event.code == "ArrowLeft" && lineNumber >= 1){
-        go(-1);
-    }else if(event.code == "Space" && at.includes(lineNumber)){
-        vs.src = `./assets/d${lineNumber}_1.png`
-    }else if(event.code == "KeyM"){
-        if (s == false){
-            s = true;
-            sound.src = "./assets/s_on.svg";
-            audio.play();
-        }
-        else{
-            s = false;
-            sound.src = "./assets/s_off.svg";
-            audio.pause();
+    if(cross == true){
+        if(event.code == "ArrowRight"){
+            go(1);
+        }else if(event.code == "ArrowLeft" && lineNumber >= 1){
+            go(-1);
+        }else if(event.code == "Space" && at.includes(lineNumber)){
+            vs.src = `./assets/d${lineNumber}_1.png`
+        }else if(event.code == "KeyM"){
+            if (s == false){
+                s = true;
+                sound.src = "./assets/s_on.svg";
+                audio.play();
+            }
+            else{
+                s = false;
+                sound.src = "./assets/s_off.svg";
+                audio.pause();
+            }
         }
     }
 });
